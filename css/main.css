@@ -26,6 +26,12 @@ body{
   background: #ededed;
 }
 /*******************************************
+LABELS
+*******************************************/
+.label{
+  border-radius: 0 !important;
+}
+/*******************************************
 CONTAINER
 *******************************************/
 .container{
@@ -100,6 +106,14 @@ DEFAULT BOX
 .box p{
   font-size: 1.3em;
   line-height: 1.5em;
+}
+.box:after{
+  width: 100%;
+  height: 3px;
+  background: url(../img/line.png);
+  margin-top: 20px;
+  content: '';
+  display: block;
 }
 /*******************************************
 EDUCATION
@@ -202,12 +216,13 @@ CONTACT
 .contact-item{
   width: 100%;
   float: left;
+  border: 1px solid #e6e6e6;
+  border-bottom: none
 }
 .contact-item .icon{
   padding: 10px;
   border-right: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-  opacity: 0.2;
+  opacity: 0.3;
 }
 .contact-item:last-child .icon{
   border-bottom: none;
@@ -234,17 +249,37 @@ CONTACT
 /*******************************************
 SKILLS
 *******************************************/
-.item-skills{
+
+.item-skills {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  margin-bottom:10px;
+}
+
+.item-skills > .skill{
   height: 30px;
   background: #F0563D;
   color: #fff;
   padding: 5px 10px;
-  margin-bottom: 5px;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 1.3em;
   font-weight: 600;
+}
+
+.item-skills > .skill-items{
+  background: #ffffff;
+  color: #fff;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  font-size: 1em;
+  border:1px solid #e6e6e6;
+  border-top:none;
 }
 .skills-legend{
   margin-top: 20px;

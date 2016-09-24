@@ -6,14 +6,14 @@ var callback = function(){
 		$(this).width(0);
     $(this).animate({
         width: newWidth,
-    }, 1000);
+    }, 0);
 	});
 	// 
 	$('.icons-red').each(function(){
 		height = $(this).height();
     $(this).animate({
         height: 14,
-    }, 2000);
+    }, 0);
 	});
 
 };
@@ -30,6 +30,6 @@ window.onresize = function() {
 
 	resize = setTimeout(function(){
 		callback();
-	}, 100);
+	},10);
 
 };
